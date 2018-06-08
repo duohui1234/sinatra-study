@@ -62,3 +62,21 @@ get '/lunch-hash' do
    erb  :lunchmenu
    
 end
+
+
+get '/randomgame/:name' do
+   
+    @url = "https://lh3.googleusercontent.com/qd9AeeK9I9rU0qL_y-ANSMwwkP9X9zN92yL7f1OItOQXDYO_6R6k47_421tan702eZRSH3oTltTnnxx98QIqzNjrzfVDbu-h=s640-l65"
+    @name = params[:name]
+    
+    arr = ["유영무","정선우","한현우","백상우"]
+    
+    if @name == "이태우"
+        @result = "안유정"
+    elsif
+        @result = arr.sample
+    end
+
+    erb  :random
+
+end
